@@ -28,7 +28,6 @@ body {
     font-optical-sizing: auto;
     font-style: normal;
     font-size: 18px;
-    padding-bottom: 1000px;
 }
 
 a {
@@ -324,7 +323,7 @@ h3 {
     .proyect{
         display: flex;
         gap: 30px;
-        @mefia(max-width:1024px){
+        @media(max-width:1024px){
             flex-direction:column;
         }
         article{
@@ -357,7 +356,12 @@ h3 {
                 object-fit: cover;
                 transition: ease 0.3s all;
             }
-            
+            a {
+                display: inline-block;
+                margin-right: 15px;
+                gap: 25px;
+            }
+
             &:hover{
                 img{
                     transform: scale(1.2);
@@ -365,5 +369,19 @@ h3 {
                 }
             }
         }
+    }
+}
+
+footer {
+    background-color: var(--base);
+    padding: 15px;
+    
+    text-align: center;
+    h3{
+        color: var(--base-100);
+    }
+    
+    .button{
+        background-color: var(--orange-800);
     }
 }
